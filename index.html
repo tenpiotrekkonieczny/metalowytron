@@ -9,12 +9,15 @@
 <body>
     <!-- Nagłówek -->
     <header id="top">
-        <nav>
+        <nav aria-label="Menu główne">
             <a class="logo" href="#top" aria-label="Iron Throne - strona główna">
                 <img class="logo-mark" src="assets/images/Copilot_20261001_000019.jpg" alt="Metalowy tron z nazwą zespołu" />
                 
             </a>
-            <ul>
+            <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-controls="primary-navigation" aria-expanded="false" title="Otwórz menu">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <ul id="primary-navigation">
                 <li><a href="#about">O nas</a></li>
                 <li><a href="#members">Zespół</a></li>
                 <li><a href="#concerts">Koncerty</a></li>

@@ -1,5 +1,38 @@
 document.getElementById('current-date').textContent = new Date().getFullYear();
 
+const navToggle = document.querySelector('.nav-toggle');
+const primaryNavigation = document.getElementById('primary-navigation');
+
+if (navToggle && primaryNavigation) {
+    const closeNavigation = () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Otwórz menu');
+        navToggle.setAttribute('title', 'Otwórz menu');
+        navToggle.closest('nav').classList.remove('is-open');
+    };
+
+    navToggle.addEventListener('click', () => {
+        const shouldExpand = navToggle.getAttribute('aria-expanded') !== 'true';
+        navToggle.setAttribute('aria-expanded', String(shouldExpand));
+        navToggle.setAttribute('aria-label', shouldExpand ? 'Zamknij menu' : 'Otwórz menu');
+        navToggle.setAttribute('title', shouldExpand ? 'Zamknij menu' : 'Otwórz menu');
+        navToggle.closest('nav').classList.toggle('is-open', shouldExpand);
+    });
+
+    primaryNavigation.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeNavigation);
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+            closeNavigation();
+            navToggle.focus();
+        }
+    });
+
+    window.matchMedia('(min-width: 601px)').addEventListener('change', closeNavigation);
+}
+
         const logoMark = document.querySelector('.logo-mark');
         if (logoMark) {
             logoMark.addEventListener('mouseenter', () => {
