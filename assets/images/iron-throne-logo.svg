@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 700" role="img" aria-label="Iron Throne logo">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="12%" stop-color="#dfe3e8"/>
+      <stop offset="26%" stop-color="#f8f8f8"/>
+      <stop offset="45%" stop-color="#bfc5cc"/>
+      <stop offset="64%" stop-color="#f0f0f0"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <filter id="roughText" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.15" numOctaves="2" seed="9" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="7" stdDeviation="12" flood-color="#ffffff" flood-opacity="0.24"/>
+    </filter>
+
+    <filter id="sharpGlow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <g fill="none" stroke="#f3f3f3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.86">
+      <path d="M246 257 C 145 181, 120 103, 149 22 C 192 33, 248 86, 282 156 C 300 193, 291 220, 246 257 Z"/>
+      <path d="M219 251 C 162 205, 145 155, 165 100 C 198 122, 234 169, 251 214"/>
+      <path d="M207 155 C 177 119, 171 84, 185 52"/>
+
+      <path d="M1554 257 C 1655 181, 1680 103, 1651 22 C 1608 33, 1552 86, 1518 156 C 1500 193, 1509 220, 1554 257 Z"/>
+      <path d="M1581 251 C 1638 205, 1655 155, 1635 100 C 1602 122, 1566 169, 1549 214"/>
+      <path d="M1593 155 C 1623 119, 1629 84, 1615 52"/>
+
+      <path d="M540 490 C 632 444, 712 423, 796 431 C 882 440, 942 475, 1013 470 C 1098 465, 1160 421, 1230 425 C 1302 429, 1363 474, 1441 468 C 1521 462, 1586 423, 1665 440"/>
+      <path d="M452 508 C 490 468, 541 461, 584 478"/>
+      <path d="M1348 508 C 1390 468, 1440 460, 1482 476"/>
+    </g>
+
+    <g fill="none" stroke="#f3f3f3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M365 467 C 415 431, 473 425, 520 441"/>
+      <path d="M1430 467 C 1480 431, 1538 425, 1585 441"/>
+      <path d="M612 546 L 602 596"/>
+      <path d="M745 538 L 738 591"/>
+      <path d="M908 541 L 908 597"/>
+      <path d="M1084 541 L 1087 597"/>
+      <path d="M1254 538 L 1261 591"/>
+      <path d="M1388 546 L 1399 596"/>
+      <path d="M631 569 C 650 585, 669 591, 686 588"/>
+      <path d="M883 586 C 904 600, 923 605, 942 601"/>
+      <path d="M1052 585 C 1073 601, 1093 605, 1115 600"/>
+      <path d="M1237 583 C 1258 599, 1280 604, 1302 600"/>
+    </g>
+
+    <g opacity="0.82" filter="url(#sharpGlow)">
+      <path d="M555 355 L 579 315 L 608 355 L 635 315 L 660 355 L 686 315 L 712 355" fill="none" stroke="#f4f4f4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1088 355 L 1112 315 L 1141 355 L 1168 315 L 1193 355 L 1219 315 L 1245 355" fill="none" stroke="#f4f4f4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M641 372 C 679 338, 726 332, 766 349" fill="none" stroke="#f5f5f5" stroke-width="4" stroke-linecap="round"/>
+      <path d="M1159 372 C 1121 338, 1074 332, 1034 349" fill="none" stroke="#f5f5f5" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <text
+      x="50%"
+      y="54%"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      font-size="390"
+      font-weight="900"
+      font-style="italic"
+      letter-spacing="-18"
+      font-family="Georgia, 'Times New Roman', serif"
+      fill="url(#metalGradient)"
+      stroke="#f8f8f8"
+      stroke-opacity="0.9"
+      stroke-width="5"
+      paint-order="stroke fill"
+      filter="url(#roughText)"
+    >IRON THRONE</text>
+
+    <g fill="none" stroke="#f4f4f4" stroke-width="4" stroke-linecap="round" opacity="0.75">
+      <path d="M618 487 C 604 456, 604 427, 617 399"/>
+      <path d="M772 486 C 767 453, 772 421, 787 389"/>
+      <path d="M918 488 C 924 449, 938 420, 963 380"/>
+      <path d="M1080 488 C 1074 450, 1060 420, 1034 382"/>
+      <path d="M1240 486 C 1251 453, 1248 423, 1231 392"/>
+      <path d="M1393 487 C 1409 456, 1417 426, 1406 393"/>
+    </g>
+  </g>
+</svg>
