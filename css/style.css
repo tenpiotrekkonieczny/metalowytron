@@ -881,3 +881,60 @@
                 width: 100%;
             }
         }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 0;
+            }
+
+            .hero h1 {
+                animation: none;
+                transform: none;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 16px;
+            }
+
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                width: 100%;
+                gap: 6px 8px;
+            }
+
+            nav ul li {
+                min-width: 0;
+            }
+
+            nav ul a {
+                display: flex;
+                min-height: 40px;
+                align-items: center;
+                justify-content: center;
+                padding: 4px 2px;
+                text-align: center;
+                font-size: 11px;
+                line-height: 1.25;
+            }
+
+            .about h2,
+            .members h2,
+            .concerts h2,
+            .gallery h2,
+            .shop h2,
+            .contact h2 {
+                font-size: 32px;
+            }
+
+            .products-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                row-gap: 10px;
+            }
+        }
