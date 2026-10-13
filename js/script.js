@@ -33,6 +33,23 @@ if (navToggle && primaryNavigation) {
     window.matchMedia('(min-width: 601px)').addEventListener('change', closeNavigation);
 }
 
+const shopFilters = document.querySelectorAll('.shop-filter');
+const shopProducts = document.querySelectorAll('.product-card');
+
+shopFilters.forEach(activeFilter => {
+    activeFilter.addEventListener('click', () => {
+        const selectedCategory = activeFilter.dataset.category;
+
+        shopFilters.forEach(candidateFilter => {
+            candidateFilter.setAttribute('aria-pressed', String(candidateFilter === activeFilter));
+        });
+
+        shopProducts.forEach(product => {
+            product.hidden = selectedCategory !== 'all' && product.dataset.category !== selectedCategory;
+        });
+    });
+});
+
         const logoMark = document.querySelector('.logo-mark');
         if (logoMark) {
             logoMark.addEventListener('mouseenter', () => {

@@ -22,7 +22,7 @@
                 <li><a href="#members">Zespół</a></li>
                 <li><a href="#concerts">Koncerty</a></li>
                 <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#shop">Merch</a></li>
+                <li><a href="#shop">Sklep</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
@@ -31,7 +31,7 @@
     <!-- Hero -->
     <section class="hero">
         <h1>
-            <img src="assets/images/Copilot_20260909_003917.png" alt="Iron Throne" />
+            <img src="assets/images/iron-throne-logo-transparent.png" alt="Iron Throne" />
         </h1>
         <p>Gdzie metal spotyka burzę</p>
         <button class="cta-button">Słuchaj nas</button>
@@ -175,8 +175,14 @@
     <section id="shop" class="shop">
         <div class="container">
             <h2>Oficjalny Merch</h2>
+            <div class="shop-filters" role="group" aria-label="Kategorie produktów">
+                <button class="shop-filter" type="button" data-category="all" aria-pressed="true">Wszystkie <span class="shop-filter-count">6</span></button>
+                <button class="shop-filter" type="button" data-category="clothing" aria-pressed="false">Odzież <span class="shop-filter-count">3</span></button>
+                <button class="shop-filter" type="button" data-category="music" aria-pressed="false">Muzyka <span class="shop-filter-count">1</span></button>
+                <button class="shop-filter" type="button" data-category="accessories" aria-pressed="false">Akcesoria <span class="shop-filter-count">2</span></button>
+            </div>
             <div class="products-grid">
-                <div class="product-card">
+                <div class="product-card" data-category="clothing">
                     <div class="product-image shirt" role="img" aria-label="Czarna koszulka zespołu"></div>
                     <div class="product-info">
                         <h3>Koszulka "Iron Throne"</h3>
@@ -188,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="clothing">
                     <div class="product-image hoodie" role="img" aria-label="Czarna bluza z kapturem"></div>
                     <div class="product-info">
                         <h3>Bluza z kapturem</h3>
@@ -200,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="music">
                     <div class="product-image album" role="img" aria-label="Płyta muzyczna zespołu"></div>
                     <div class="product-info">
                         <h3>Album "Thunder Rising"</h3>
@@ -212,7 +218,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="accessories">
                     <div class="product-image patch" role="img" aria-label="Naszywka na ubranie"></div>
                     <div class="product-info">
                         <h3>Naszywka "Logo"</h3>
@@ -224,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="accessories">
                     <div class="product-image picks" role="img" aria-label="Plektry gitarowe"></div>
                     <div class="product-info">
                         <h3>Plektry – edycja limitowana</h3>
@@ -236,7 +242,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="clothing">
                     <div class="product-image cap" role="img" aria-label="Czarna czapka z daszkiem"></div>
                     <div class="product-info">
                         <h3>Czapka Snapback</h3>
