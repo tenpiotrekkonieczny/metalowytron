@@ -588,10 +588,13 @@
             align-items: center;
             gap: 10px;
             padding: 0 16px;
-            border: 1px solid #555;
+            appearance: none;
+            -webkit-appearance: none;
+            touch-action: manipulation;
+            border: 1px solid #d4af37;
             border-radius: 3px;
             background: #1a1a1a;
-            color: #e0e0e0;
+            color: #d4af37;
             font-size: 13px;
             font-weight: bold;
             text-transform: uppercase;
@@ -618,6 +621,15 @@
         .shop-filter-count {
             font-size: 11px;
             opacity: 0.75;
+        }
+
+        .shop-cart-status {
+            min-height: 1.5em;
+            margin: -18px 0 18px;
+            color: #d4af37;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: right;
         }
 
         .products-grid {
@@ -711,6 +723,9 @@
         }
 
         .add-to-cart {
+            appearance: none;
+            -webkit-appearance: none;
+            touch-action: manipulation;
             background: #d4af37;
             color: #000;
             border: none;
@@ -721,6 +736,15 @@
             transition: all 0.3s;
             text-transform: uppercase;
             font-size: 12px;
+        }
+
+        .add-to-cart:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
+        }
+
+        .add-to-cart.is-added {
+            background: #e7c76e;
         }
 
         .add-to-cart:hover {
@@ -942,7 +966,7 @@
             }
 
             .hero h1 {
-                animation: none;
+                animation: fadeInUp 0.9s ease both;
                 transform: none;
             }
 
@@ -1062,6 +1086,11 @@
                 gap: 7px;
                 padding: 0 11px;
                 font-size: 12px;
+            }
+
+            .shop-cart-status {
+                margin-top: -12px;
+                text-align: center;
             }
 
             .social-links {

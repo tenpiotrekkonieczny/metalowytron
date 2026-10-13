@@ -50,6 +50,37 @@ shopFilters.forEach(activeFilter => {
     });
 });
 
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const shopCartStatus = document.getElementById('shop-cart-status');
+const shopCartItems = new Map();
+
+addToCartButtons.forEach(addButton => {
+    addButton.addEventListener('click', () => {
+        const productCard = addButton.closest('.product-card');
+        const productName = productCard.querySelector('h3').textContent.trim();
+        const productPrice = Number(productCard.querySelector('.product-price').textContent.replace(/[^\d]/g, ''));
+        const cartItem = shopCartItems.get(productName) || { price: productPrice, quantity: 0 };
+        cartItem.quantity += 1;
+        shopCartItems.set(productName, cartItem);
+
+        const itemCount = [...shopCartItems.values()].reduce((count, item) => count + item.quantity, 0);
+        const totalPrice = [...shopCartItems.values()].reduce((total, item) => total + item.price * item.quantity, 0);
+        const itemWord = itemCount === 1 ? 'produkt' : itemCount < 5 ? 'produkty' : 'produktów';
+
+        if (shopCartStatus) {
+            shopCartStatus.textContent = `Dodano: ${productName}. Koszyk: ${itemCount} ${itemWord}, ${totalPrice} zł.`;
+        }
+
+        addButton.textContent = 'Dodano';
+        addButton.classList.add('is-added');
+        window.clearTimeout(addButton.resetTimer);
+        addButton.resetTimer = window.setTimeout(() => {
+            addButton.textContent = 'Dodaj do koszyka';
+            addButton.classList.remove('is-added');
+        }, 1500);
+    });
+});
+
         const logoMark = document.querySelector('.logo-mark');
         if (logoMark) {
             logoMark.addEventListener('mouseenter', () => {
